@@ -10,7 +10,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const query = new URLSearchParams({
     client_id: process.env.GITHUB_CLIENT_ID,
     client_secret: process.env.GITHUB_CLIENT_SECRET,
-    repository_id: process.env.GITHUB_REPOSITORY_ID,
+    // repository_id: process.env.GITHUB_REPOSITORY_ID,
     code: code as string,
   })
   endpoint.search = query.toString()
