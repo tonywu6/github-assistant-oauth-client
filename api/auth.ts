@@ -19,6 +19,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     headers: {
       Accept: 'application/json',
     },
-  }).then((r) => r.json() as Promise<{ access_token: string }>)
+  }).then((r) => {
+    const data = r.json() as Promise<{ access_token: string }>
+    console.log(data)
+    return data
+  })
   return res.json({ access_token })
 }
