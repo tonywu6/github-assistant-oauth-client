@@ -4,8 +4,7 @@ import { Octokit } from 'octokit'
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   const octokit = new Octokit({
-    authStrategy: createTokenAuth,
-    auth: process.env.GITHUB_PAT,
+    auth: await createTokenAuth(process.env.GITHUB_PAT!)(),
   })
   const issues = await octokit.rest.issues.listForRepo({
     owner: 'secretflow',
