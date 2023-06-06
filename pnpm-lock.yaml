@@ -4,9 +4,6 @@ dependencies:
   '@octokit/auth-oauth-user':
     specifier: ^2.1.1
     version: 2.1.1
-  '@octokit/auth-token':
-    specifier: ^3.0.3
-    version: 3.0.3
   octokit:
     specifier: ^2.0.19
     version: 2.0.19
